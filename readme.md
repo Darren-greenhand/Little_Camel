@@ -1,6 +1,5 @@
 # Start from Alpaca
 
-<<<<<<< HEAD
 Novices also want to join the bandwagon of building LLMs !
 
 Start from Organizing and assembling the Existing repository, and then try to add something new !!
