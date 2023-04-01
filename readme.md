@@ -4,17 +4,6 @@
 Novices also want to join the bandwagon of building LLMs !
 
 Start from Organizing and assembling the Existing repository, and then try to add something new. 
-=======
-<<<<<<< HEAD
-Novices also want to join the bandwagon of building LLMs !
-=======
-从alpaca开始理解一个项目，并进一步根据其他项目完善——2023.4.1
->>>>>>> main
-
-Start from Organizing and assembling the Existing repository, and then try to add something new.
->>>>>>> 41c7805... Update readme.md
-
-test
 
 
 ## Source
