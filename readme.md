@@ -28,6 +28,32 @@ Start from Organizing and assembling the Existing repository, and then try to ad
   | Chinese-LLaMA-13B  | 通用     | 原版LLaMA-13B[1] | ⏳       | ⏳                                                            | ⏳                  |
   | Chinese-Alpaca-7B  | 指令精调 | 原版LLaMA-7B[1]  | 790M    | [[百度网盘\]](https://pan.baidu.com/s/1xV1UXjh1EPrPtXg6WyG7XQ?pwd=923e) [[Google Drive\]](https://drive.google.com/file/d/1JvFhBpekYiueWiUL3AF1TtaWDb3clY5D/view?usp=sharing) [[HuggingFace\]](https://huggingface.co/ziqingyang/chinese-alpaca-lora-7b) | 9bb5b6......ce2d87 |
   | Chinese-Alpaca-13B | 指令精调 | 原版LLaMA-13B[1] | ⏳       | ⏳                                                            | ⏳                  |
+  
+- Various adapter weights (download at own risk):
+  
+  - 7B:
+    - https://huggingface.co/tloen/alpaca-lora-7b
+    - https://huggingface.co/samwit/alpaca7B-lora
+    - 🇧🇷 https://huggingface.co/22h/cabrita-lora-v0-1
+    - 🇨🇳 https://huggingface.co/qychen/luotuo-lora-7b-0.1
+    - 🇯🇵 https://huggingface.co/kunishou/Japanese-Alapaca-LoRA-7b-v0
+    - 🇫🇷 https://huggingface.co/bofenghuang/vigogne-lora-7b
+    - 🇹🇭 https://huggingface.co/Thaweewat/thai-buffala-lora-7b-v0-1
+    - 🇩🇪 https://huggingface.co/thisserand/alpaca_lora_german
+    - 🇮🇹 https://huggingface.co/teelinsan/camoscio-7b-llama
+    - 🇷🇺 https://huggingface.co/IlyaGusev/llama_7b_ru_turbo_alpaca_lora
+  - 13B:
+    - https://huggingface.co/chansung/alpaca-lora-13b
+    - https://huggingface.co/mattreid/alpaca-lora-13b
+    - https://huggingface.co/samwit/alpaca13B-lora
+    - 🇯🇵 https://huggingface.co/kunishou/Japanese-Alapaca-LoRA-13b-v0
+    - 🇰🇷 https://huggingface.co/chansung/koalpaca-lora-13b
+    - 🇨🇳 https://huggingface.co/facat/alpaca-lora-cn-13b
+    - 🇪🇸 https://huggingface.co/plncmm/guanaco-lora-13b
+  - 30B:
+    - https://huggingface.co/baseten/alpaca-30b
+    - https://huggingface.co/chansung/alpaca-lora-30b
+    - 🇯🇵 https://huggingface.co/kunishou/Japanese-Alapaca-LoRA-30b-v0
 
 
 
@@ -50,6 +76,36 @@ This repository contains code for reproducing the [Stanford Alpaca](https://gith
 In addition to the training code, which runs within hours on a single RTX 4090, we publish a script for downloading and inference on the foundation model and LoRA, as well as the resulting [LoRA weights themselves](https://huggingface.co/tloen/alpaca-lora-7b/tree/main). To fine-tune cheaply and efficiently, we use Hugging Face's [PEFT](https://github.com/huggingface/peft) as well as Tim Dettmers' [bitsandbytes](https://github.com/TimDettmers/bitsandbytes).
 
 Without hyperparameter tuning, the LoRA model produces outputs comparable to the Stanford Alpaca model. (Please see the outputs included below.) Further tuning might be able to achieve better performance
+
+
+
+[BELLE: Be Everyone's Large Language model Engine](https://github.com/LianjiaTech/BELLE)
+
+项目包含以下内容:
+
+项目包含以下内容:
+
+- ![Docs](https://camo.githubusercontent.com/891a55bda5f44b5da6bb2a00163b7155fac2bd60154f59accc244b6c31783316/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f254538254145254144254537254242253833254534254242254133254537254130253831747261696e2d626c7565)
+
+  - 详见[BELLE/train](https://github.com/LianjiaTech/BELLE/tree/main/train)，尽可能简化的一个训练代码实现，支持finetune，lora，deepspeed
+
+- ![Docs](https://camo.githubusercontent.com/411b860c93c9780ebbc8e876d0fea0f0fb9aeeb8e94c8bab8f850b28a2a3dab2/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f254536253935254230254536253844254145254535254243253830254536253934254245312e354d2d626c7565)
+
+   
+
+  ![Docs](https://camo.githubusercontent.com/8a9ab3975a7baa6652c8618f95ed2fec580b07ba80ac11db1973050d52be8cf8/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f25453625393525423025453625384425414525453525424325383025453625393425424531304d2d626c7565)
+
+  - 详见[BELLE/1.5M](https://github.com/LianjiaTech/BELLE/tree/main/1.5M)，参考[Stanford Alpaca](https://github.com/tatsu-lab/stanford_alpaca) 生成的中文数据集[1M](https://huggingface.co/datasets/BelleGroup/train_1M_CN) + [0.5M](https://huggingface.co/datasets/BelleGroup/train_0.5M_CN)；
+  - 持续开放的数据集，详见[BELLE/10M](https://github.com/LianjiaTech/BELLE/tree/main/10M)，目前开放了[0.25M数学指令数据集](https://huggingface.co/datasets/BelleGroup/school_math_0.25M)和[0.8M多轮任务对话数据集](https://huggingface.co/datasets/BelleGroup/multiturn_chat_0.8M)
+
+- ![Docs](https://camo.githubusercontent.com/6baec3b647d7b89723332b80b62bef1e303ef430e41f75b0c977c72032288903/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f2545362541382541312545352539452538422d626c7565)
+
+  - 基于BLOOMZ-7B1-mt优化后的模型：[BELLE-7B-0.2M](https://huggingface.co/BelleGroup/BELLE-7B-0.2M)，[BELLE-7B-0.6M](https://huggingface.co/BelleGroup/BELLE-7B-0.6M)，[BELLE-7B-1M](https://huggingface.co/BelleGroup/BELLE-7B-1M)，[BELLE-7B-2M](https://huggingface.co/BelleGroup/BELLE-7B-2M)
+  - 基于[huggingface的LLaMA实例](https://huggingface.co/decapoda-research)实现[调优的模型](https://huggingface.co/BelleGroup)：[BELLE-LLAMA-13B-2M](https://huggingface.co/BelleGroup/BELLE-LLAMA-13B-2M)，[BELLE-LLAMA-7B-2M](https://huggingface.co/BelleGroup/BELLE-LLAMA-7B-2M)，[BELLE-LLAMA-7B-0.6M](https://huggingface.co/BelleGroup/BELLE-LLAMA-7B-0.6M)。请注意，本项目不能保证其是原版的LLaMA模型，也不能保证调优后的模型和LLaMA原版模型之间的关系。请参考[Meta LLaMA的License](https://github.com/facebookresearch/llama/blob/main/LICENSE)和[huggingface的LLaMA实例的License](https://huggingface.co/decapoda-research/llama-7b-hf/blob/main/LICENSE)，目前仅供学习交流。请严遵守LLaMA的使用限制。强烈建议大家基于训练脚本和开放数据调优模型。
+
+- ![Docs](https://camo.githubusercontent.com/18346c77c508307e601aa65b46ad01f2435bb015b1291b6083feb313d678300f/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f254536254138254131254535253945253842254539253837253846254535253843253936677074712d626c7565)
+
+  - 详见[BELLE/gptq](https://github.com/LianjiaTech/BELLE/tree/main/gptq)，参考gptq的实现，对本项目中相关模型进行了量化
 
 
 
